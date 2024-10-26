@@ -3,6 +3,7 @@
     "oven.bun-vscode",
     "bradlc.vscode-tailwindcss",
     "biomejs.biome",
-    "jaspernorth.vscode-pigments"
+    "jaspernorth.vscode-pigments",
+    "yoavbls.pretty-ts-errors"
   ]
 }

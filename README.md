@@ -39,7 +39,12 @@ bun dev
 
 ## Todo
 
-- [ ] Improve error handling for the build, make it error messages foolproof
+- [ ] Imports validation?
+- [ ] Sitemap
+- [ ] robots.txt
+- [ ] analytics?
+- [ ] CI that makes a report on the built site diff?
+- [ ] Improve error handling for the build, make error messages foolproof
 - [ ] Add a Github Action that creates a release when merging on merge with a zip containing the built website
 - [ ] Add a Github action for [auto-update](https://0xdc.me/blog/github-templates-and-repository-sync/)?
 - [ ] Handle 404

@@ -24,7 +24,7 @@
     "build:html": "bun run src/build.ts",
     "dev:html": "bun run --watch src/build.ts",
     "dev:serve": "serve dist",
-    "dev": "concurrently \"bun lint:fix\" \"bun dev:css\" \"bun dev:html\" \"bun dev:serve\"",
-    "build": "concurrently \"bun build:css\" \"bun build:html\""
+    "dev": "concurrently -p [{name}] -c red,blue,yellow,green bun:lint:fix bun:dev:css bun:dev:html bun:dev:serve",
+    "build": "concurrently -p [{name}] -c blue,yellow bun:build:css bun:build:html"
   }
 }

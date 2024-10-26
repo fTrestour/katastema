@@ -16,13 +16,15 @@
     "concurrently": "^9.0.1"
   },
   "scripts": {
-    "lint": "biome check --write",
+    "check-types": "tsc --noEmit",
+    "lint": "biome check",
+    "lint:fix": "biome check --write",
     "build:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify",
     "dev:css": "tailwindcss --watch -i ./src/styles.css -o ./dist/styles.css",
     "build:html": "bun run src/build.ts",
     "dev:html": "bun run --watch src/build.ts",
     "dev:serve": "serve dist",
-    "dev": "concurrently \"bun lint\" \"bun dev:css\" \"bun dev:html\" \"bun dev:serve\"",
+    "dev": "concurrently \"bun lint:fix\" \"bun dev:css\" \"bun dev:html\" \"bun dev:serve\"",
     "build": "concurrently \"bun build:css\" \"bun build:html\""
   }
 }

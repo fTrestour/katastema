@@ -23,6 +23,9 @@
       "recommended": true,
       "nursery": {
         "useSortedClasses": "warn"
+      },
+      "complexity": {
+        "useLiteralKeys": "off"
       }
     }
   },

@@ -47,6 +47,9 @@ bun install
 
 ### Development
 
+Go to `.env` and set all the values properly.
+This file is commited with the others, so don't put any secrets in there.
+
 To start the development server, which watches for changes in your TypeScript and CSS files, run:
 
 ```bash
@@ -58,10 +61,8 @@ You are now ready to go!
 ## Todo
 
 - [ ] Imports validation?
-- [ ] Sitemap
-- [ ] robots.txt
 - [ ] analytics?
-- [ ] CI that makes a report on the built site diff?
+- [ ] CI that makes a report on the built site diff? Maybe use the sitemap?
 - [ ] Improve error handling for the build, make error messages foolproof
 - [ ] Handle 404
 - [ ] Improve default Home

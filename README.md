@@ -15,6 +15,12 @@ The repository is organized as follows:
 - `src/styles.css`: This is the source Tailwind CSS file where you can add and customize your styles.
 - `src/layout.tsx`: This file contains the base structure to render all your pages. It includes the meta header and other common elements shared across all pages.
 
+## Github Actions
+
+This project uses GitHub Actions to:
+- Test the build is not broken when pushing on any branch.
+- Create a release containing the built website in an archive file - both `.tar.gz` and `zip` - when pushing on `main`
+
 ## Getting Started
 
 ### Prerequisites
@@ -37,6 +43,8 @@ To start the development server, which watches for changes in your TypeScript an
 bun dev
 ```
 
+
+
 ## Todo
 
 - [ ] Imports validation?
@@ -45,7 +53,6 @@ bun dev
 - [ ] analytics?
 - [ ] CI that makes a report on the built site diff?
 - [ ] Improve error handling for the build, make error messages foolproof
-- [ ] Add a Github Action that creates a release when merging on merge with a zip containing the built website
 - [ ] Add a Github action for [auto-update](https://0xdc.me/blog/github-templates-and-repository-sync/)?
 - [ ] Handle 404
 - [ ] Improve default Home

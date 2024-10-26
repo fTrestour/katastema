@@ -1,0 +1,46 @@
+name: Test, build and release
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Bun
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version-file: ".bun-version"
+
+    - name: Install dependencies
+      run: bun install
+
+    - name: Check types
+      run: bun run check-types
+
+    - name: Lint code
+      run: bun run lint 
+
+    - name: Build the project
+      run: bun run build
+    
+    - name: Archive dist folder
+      if: github.ref == 'refs/heads/main' && github.repository != 'fTrestour/katastema'
+      run: |
+        tar -czf site.tar.gz -C dist .
+        zip -r site.zip dist
+
+    - name: Release
+      if: github.ref == 'refs/heads/main' && github.repository != 'fTrestour/katastema'
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: "${{ github.run_id }}"
+        files: |
+          site.tar.gz
+          site.zip

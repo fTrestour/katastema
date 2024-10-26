@@ -21,7 +21,7 @@
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "[jsonc]": {
+  "[css]": {
     "editor.defaultFormatter": "biomejs.biome"
   }
 }

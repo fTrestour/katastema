@@ -65,4 +65,3 @@ You are now ready to go!
 - [ ] CI that makes a report on the built site diff? Maybe use the sitemap?
 - [ ] Improve error handling for the build, make error messages foolproof
 - [ ] Handle 404
-- [ ] Improve default Home

@@ -20,6 +20,8 @@ The repository is organized as follows:
 This project uses GitHub Actions to:
 - Test the build is not broken when pushing on any branch.
 - Create a release containing the built website in an archive file - both `.tar.gz` and `zip` - when pushing on `main`
+- Pull updates from the template repository into your project. To do that : "Actions" > "Template update" > "Run workflow". To have it work properly, you should update workflow permissions beforehand in "Settings" > "Actions" > "General", like so:
+![Needed permissions](./assets/permissions.png)
 
 ## Getting Started
 

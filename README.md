@@ -10,7 +10,7 @@ It focuses on simplicity, while providing a modern component-driven development 
 ## Getting Started
 
 Create your own repository by using this repository as a template:
-![Use this template](./assets/create.png)
+![Use this template](./doc-assets/create.png)
 
 ## File Structure
 
@@ -29,7 +29,7 @@ This project uses GitHub Actions to:
 - **Test the build** is not broken when pushing on any branch.
 - **Create a release** containing the built website in an archive file - both `.tar.gz` and `zip` - when pushing on `main`
 - **Pull updates from the template repository** into your own project and creates a PR for the update. By default, updates are fetched once a day. They can also be triggered manually : "Actions" > "Template update" > "Run workflow". To have this behaviour work properly, you should update workflow permissions beforehand in "Settings" > "Actions" > "General", like so:
-  ![Needed permissions](./assets/permissions.png)
+  ![Needed permissions](./doc-assets/permissions.png)
 
 ## Create your amazing website!
 

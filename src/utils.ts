@@ -1,6 +1,6 @@
-import { Glob } from "bun";
 import { promises as fs } from "node:fs";
 import { join } from "node:path";
+import { Glob } from "bun";
 
 export function getEnv() {
   const siteUrl = process.env["SITE_URL"];

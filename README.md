@@ -21,6 +21,8 @@ The is organized as follows:
 - **`dist`**: Your site is built there.
 - **`src/styles.css`**: This is the source Tailwind CSS file where you can add and customize your styles.
 - **`src/layout.tsx`**: This file contains the base structure to render all your pages. It includes the meta header and other common elements shared across all pages.
+- **`src/components/`**: This directory is used to store components for your design system, allowing for reusable and consistent UI elements across your site.
+- **`src/static/`**: This directory is designated for storing static files that should be included as-is in your website. These files are directly copied to the `dist` directory during the build process. This is particularly useful for assets like images, fonts, or any other files that do not require processing or compilation, ensuring they are available in their original form on your site.
 
 ## Github Actions
 

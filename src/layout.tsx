@@ -17,6 +17,7 @@ export default function Layout(
           />
           <title safe>{props.title}</title>
           <link href="/styles.css" rel="stylesheet" />
+          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         </head>
         <body>{props.children}</body>
       </html>

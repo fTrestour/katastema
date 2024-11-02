@@ -1,10 +1,4 @@
-import { buildPages, copyStaticFiles, createSiteMap, getEnv } from "./utils";
+import { buildPages, copyStaticFiles, createSiteMap } from "./utils";
 
-async function render() {
-  const { siteUrl } = getEnv();
-  const builtFilenames = await buildPages();
-  await copyStaticFiles();
-  await createSiteMap(builtFilenames, siteUrl);
-}
-
-render().catch(console.error);
+buildPages().then(createSiteMap);
+copyStaticFiles();

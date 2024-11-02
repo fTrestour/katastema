@@ -1,14 +1,14 @@
 import { Html, type PropsWithChildren } from "@kitajs/html";
-import { getEnv } from "./utils";
+import { getSiteConfig } from "./utils";
 
 export default function Layout(
   props: PropsWithChildren<{ title: string; lang?: string }>,
 ) {
-  const { siteLang } = getEnv();
+  const { lang } = getSiteConfig();
   return (
     <>
       {"<!DOCTYPE html>"}
-      <html lang={props.lang ?? siteLang}>
+      <html lang={props.lang ?? lang}>
         <head>
           <meta charset="UTF-8" />
           <meta
